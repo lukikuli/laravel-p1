@@ -15,15 +15,10 @@ Auth::routes(['register' => false]);
 Route::get('logout', function(){
      return back();
 });
-//Auth::routes();
 
 Route::name('home')->get('/home', 'HomeController@index');
 Route::name('home')->get('/', 'HomeController@index');
 Route::name('admin')->get('/admin', 'HomeController@index');
-
-//Route::name('login')->get('/login', 'UserController@login');
-//Route::post('/loginPost', 'UserController@loginPost');
-//Route::name('logout')->get('/logout', 'UserController@logout');
 
 Route::post('/getAjaxBarang', 'AjaxController@getAjaxBarkodeBarang');
 Route::post('/getAJaxKodeBarang', 'AjaxController@getAjaxBarangbyKode');
